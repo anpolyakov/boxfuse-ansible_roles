@@ -21,3 +21,10 @@
   roles:
     - build
 
+- name: Copy artefact to production server
+  hosts: production
+  become: yes
+
+  roles:
+    - copy
+
