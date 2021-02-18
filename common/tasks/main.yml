@@ -1,7 +1,7 @@
 ---
 # tasks file for common
 - name: Ensure openJDK is present
-    apt:
-      name: default-jdk
-      update_cache: yes
-      state: present
+  apt:
+    name: default-jdk
+    update_cache: yes
+    state: present
