@@ -1,0 +1,13 @@
+---
+# tasks file for tomcat
+- name: Get java application
+  git:
+    repo: https://github.com/boxfuse/boxfuse-sample-java-war-hello
+      clone: yes
+      dest: /tmp/boxfuse-sample-java-war-hello
+
+- name: Build procces java application
+  shell: mvn package
+    args:    
+      chdir: /tmp/boxfuse-sample-java-war-hello
+

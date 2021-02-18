@@ -1,0 +1,23 @@
+---
+- name: Maven configuration
+  hosts: staging
+  become: yes
+
+  roles:
+    - common
+    - maven
+
+- name: Tomcat configuration
+  hosts: production
+  become: yes
+
+  roles:
+    - tomcat
+
+- name: Build java application
+  hosts: staging
+  become: yes
+
+  roles:
+    - build
+
