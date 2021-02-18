@@ -1,8 +1,8 @@
 ---
 # tasks file for maven
 - name: Ensure maven is present
-    apt:
-     name: maven
-     update_cache: yes
-     state: present
+  apt:
+    name: maven
+    update_cache: yes
+    state: present
 
